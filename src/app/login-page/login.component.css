@@ -1,0 +1,9 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.error-msg{
+    color: orangered;
+    font-size: 1rem;
+}

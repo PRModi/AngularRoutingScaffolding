@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-centered">
+            <form novalidate [formGroup]="loginForm" (ngSubmit)="submit()">
+                <div class="form-group">
+                    <label for="userName">Username</label>
+                    <input formControlName="userName" type="text" placeholder="testuser" id="userName" class="form-control">
+                    <div class="error-msg" *ngIf="loginForm.get('userName').hasError('required')  && loginForm.get('userName').touched">
+                        Please provide a Username!
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input formControlName="password" type="password" placeholder="testpassword" id="password" class="form-control">
+                    <div class="error-msg" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+                        Please provide a Password!
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-dark" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
