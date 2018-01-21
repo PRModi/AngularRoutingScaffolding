@@ -6,14 +6,14 @@
             <form novalidate [formGroup]="loginForm" (ngSubmit)="submit()">
                 <div class="form-group">
                     <label for="userName">Username</label>
-                    <input formControlName="userName" type="text" placeholder="testUser" id="userName" class="form-control">
+                    <input formControlName="userName" type="text" placeholder="johndoe@example.com" id="userName" class="form-control">
                     <div class="error-msg" *ngIf="loginForm.get('userName').hasError('required')  && loginForm.get('userName').touched">
                         Please provide a Username!
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input formControlName="password" type="password" placeholder="testPassword" id="password" class="form-control">
+                    <input formControlName="password" type="password" placeholder="Password" id="password" class="form-control">
                     <div class="error-msg" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
                         Please provide a Password!
                     </div>
@@ -22,7 +22,17 @@
                     <button type="button" class="btn btn-dark" type="submit">Login</button>
                 </div>
                 <br>
+                <div class="text-center">
+                    <p style="color:#D3D3D3">Note : Provide credentials
+                        <strong>testUser</strong> and
+                        <strong>testPassword</strong> to Login!
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    </p>
+                </div>
+                <br>
             </form>
         </div>
     </div>
 </div>
+
+<app-footer></app-footer>

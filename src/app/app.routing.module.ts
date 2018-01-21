@@ -3,8 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { NgModule } from "@angular/core";
 import { AuthGuard } from '../shared/guards/auth-guard.service';
-import { LoginComponent } from "./main/login-page/login.component";
 import { HomeComponent } from "./main/page/home/home.component";
+import { LoginComponent } from "./main/page/login/login.component";
 
 const appRoutes: Routes = [
     { path: '', loadChildren: './main/page/page.module#PageModule' },

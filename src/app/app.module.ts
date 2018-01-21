@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app.routing.module';
 import { AuthService } from '../shared/service/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from '../shared/component/navbar/navbar.component';
-import { LoginComponent } from './main/login-page/login.component';
 import { UserModule } from './main/user/user.module';
 
 
@@ -17,9 +16,7 @@ import { UserModule } from './main/user/user.module';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    LoginComponent,
-  ],
+    NavbarComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
