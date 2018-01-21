@@ -1,29 +1,24 @@
-import { LoginComponent } from './login-page/login.component';
-import { HomeComponent } from './page/home/home.component';
+import { PageModule } from './main/page/page.module';
+import { FooterComponent } from './../shared/component/footer/footer.component';
+import { HeaderComponent } from './../shared/component/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
-
-import { HeaderComponent } from '../shared/component/header/header.component';
-
 import { AuthGuard } from '../shared/guards/auth-guard.service';
-import { Routes } from '@angular/router';
-import { PageModule } from './page/page.module';
 import { AppRoutingModule } from './app.routing.module';
-import { UserModule } from './app/app.module';
 import { AuthService } from '../shared/service/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from '../shared/component/navbar/navbar.component';
+import { LoginComponent } from './main/login-page/login.component';
+import { UserModule } from './main/user/user.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    
-    LoginComponent
+    NavbarComponent,
+    LoginComponent,
   ],
   imports: [
     AppRoutingModule,

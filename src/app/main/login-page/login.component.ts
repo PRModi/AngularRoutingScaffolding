@@ -1,8 +1,8 @@
-import { AuthService } from './../../shared/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 import swal from 'sweetalert2';
+import { AuthService } from '../../../shared/service/auth.service';
 
 @Component({
     selector: 'app-login',
@@ -28,8 +28,6 @@ export class LoginComponent implements OnInit {
             const username = this.loginForm.value.userName;
             const password = this.loginForm.value.password;
             this.authService.isUserAuthenticated(username, password).subscribe((data) => {
-                console.log(data);
-
                 if (data) {
                     swal({
                         showCancelButton: false,
@@ -38,7 +36,7 @@ export class LoginComponent implements OnInit {
                         title: 'Logged in Successfully !',
                         timer: 1000
                     }).then(() => {
-                        this.router.navigate(['home']);
+                        this.router.navigate(['dashboard']);
                     })
                 }
                 else {
@@ -52,7 +50,7 @@ export class LoginComponent implements OnInit {
                 }
             }),
                 (err => {
-                    console.log(err);
+
                 })
 
         } else {

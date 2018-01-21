@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
-import { UserRoutingModule } from './app.routing.module';
+import { UserRoutingModule } from './user.routing.module';
+import { SharedModule } from '../shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    SharedModule
   ],
   declarations: [DashboardComponent, SettingsComponent]
 })

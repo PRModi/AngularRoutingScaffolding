@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterComponent } from '../../../shared/component/footer/footer.component';
+
+
 
 @Component({
   selector: 'app-home',
